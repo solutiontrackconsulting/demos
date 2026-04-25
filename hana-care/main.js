@@ -61,7 +61,7 @@ form.addEventListener('submit', e => {
 
     const confirmation = document.createElement('p');
     confirmation.textContent = 'Thank you! A member of our care team will be in touch within one business day.';
-    confirmation.style.cssText = 'color:#3d5a47;font-size:.9rem;margin-top:12px;text-align:center;';
+    confirmation.style.cssText = 'color:#e8960a;font-size:.9rem;margin-top:12px;text-align:center;';
     form.appendChild(confirmation);
 
     setTimeout(() => {

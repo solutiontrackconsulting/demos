@@ -162,9 +162,10 @@ body {
 }
 
 .logo-img {
-  height: 36px;
-  width: auto;
-  max-width: 44px;
+  height: 36px !important;
+  width: 36px !important;
+  max-width: 36px !important;
+  object-fit: contain;
   display: inline-block;
   flex-shrink: 0;
   /* white on dark hero nav */

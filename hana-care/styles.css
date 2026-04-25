@@ -164,12 +164,15 @@ body {
 .logo-img {
   height: 36px;
   width: auto;
-  display: block;
-  /* swap to white version on dark nav by inverting the orange mark */
+  max-width: 44px;
+  display: inline-block;
+  flex-shrink: 0;
+  /* white on dark hero nav */
   filter: brightness(0) invert(1);
   transition: filter .3s;
 }
 #nav.scrolled .logo-img {
+  /* full-color orange on light nav */
   filter: none;
 }
 

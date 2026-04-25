@@ -30,9 +30,15 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.05 });
 
-document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+const animateEls = document.querySelectorAll('.animate');
+animateEls.forEach(el => observer.observe(el));
+
+// Safety net: if observer never fires (e.g. deployment quirks), show everything
+setTimeout(() => {
+  animateEls.forEach(el => el.classList.add('visible'));
+}, 1500);
 
 // Stagger service cards and pillar items
 document.querySelectorAll('.service-card, .testimonial-card').forEach((el, i) => {
